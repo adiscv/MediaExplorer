@@ -167,26 +167,4 @@ API/Room DB → Repository → ViewModel → LiveData → Fragment/Activity (UI)
 
 Все версии указаны в `gradle/libs.versions.toml`
 
-## Troubleshooting
-
-### "API Key не работает"
-- Убедитесь, что ключ скопирован корректно в `local.properties`
-- Выполните `Sync Now` в Android Studio
-- Очистите проект: **Build → Clean Project**
-
-### Приложение падает при запуске
-- Проверьте логи в Logcat (Android Studio → View → Tool Windows → Logcat)
-- Убедитесь, что интернет-соединение активно
-
-### RecyclerView не загружает изображения
-- Проверьте разрешение `INTERNET` в AndroidManifest.xml
-- Убедитесь, что Glide корректно добавлен в зависимости
-
-## Автор
-
-Разработано как учебный проект для изучения Android разработки
-
-## Лицензия
-
-MIT License
 
