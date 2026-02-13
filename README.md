@@ -36,7 +36,7 @@
 Откройте файл `local.properties` в корне проекта и добавьте:
 
 ```properties
-TMDB_API_KEY=ваш_api_ключ_здесь
+TMDB_API_KEY=api_ключ_здесь
 ```
 
 ### 3. Синхронизация проекта
