@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.mediaexplorer.ui.main.MainFragment"
+        android:label="Popular">
+        <action
+            android:id="@+id/action_mainFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_main_to_details"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.mediaexplorer.ui.search.SearchFragment"
+        android:label="Search">
+        <action
+            android:id="@+id/action_searchFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.mediaexplorer.ui.favorites.FavoritesFragment"
+        android:label="Favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.mediaexplorer.ui.details.DetailsFragment"
+        android:label="Details">
+        <argument
+            android:name="movie_id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_detailsFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>
+

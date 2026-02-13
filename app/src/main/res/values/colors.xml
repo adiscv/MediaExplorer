@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="accent">#FF4081</color>
+    
+    <!-- Basic Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray">#757575</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    
+    <!-- Background -->
+    <color name="background">#FAFAFA</color>
+    <color name="card_background">#FFFFFF</color>
+    
+    <!-- Status -->
+    <color name="favorite_active">#FF4081</color>
+    <color name="favorite_inactive">#CCCCCC</color>
+    <color name="favorite_yellow">#FFC107</color>
+    <color name="favorite_yellow_dark">#FFA000</color>
+
+    <color name="rating_low">#D32F2F</color>
+    <color name="rating_medium">#F57C00</color>
+    <color name="rating_high">#388E3C</color>
+</resources>

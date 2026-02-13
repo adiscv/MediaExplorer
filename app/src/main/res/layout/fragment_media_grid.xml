@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="Поиск фильмов..."
+            android:textColorHint="@color/text_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:background="@android:color/white"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/filter_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_filter"
+            android:contentDescription="Фильтр"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:id="@+id/tv_filter_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:text="Вкл"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/favorites_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_star"
+            android:contentDescription="Избранное"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+    </LinearLayout>
+
+    <!-- Filter Panel -->
+    <LinearLayout
+        android:id="@+id/filter_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/gray_light"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/spinner_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_clear_filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Очистить"
+            android:layout_marginStart="8dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- No Internet Connection Message -->
+    <LinearLayout
+        android:id="@+id/layout_no_internet_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/item_border"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Нет подключения к интернету"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Доступно только избранное"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btn_refresh_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Обновить"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_media"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>
